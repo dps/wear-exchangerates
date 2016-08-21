@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">Exchange Rates</string>
+    <string name="hello_round">Hello Round World!</string>
+    <string name="hello_square">Hello Square World!</string>
+
+    <string-array name="currency_names">
+        <item>Euro</item>
+        <item>British Pound</item>
+        <item>Indian Rupee</item>
+        <item>Australian Dollar</item>
+        <item>Canadian Dollar</item>
+        <item>Japanese Yen</item>
+        <item>Chinese Yuan Renminbi</item>
+        <item>Korean Won</item>
+        <item>Bitcoin</item>
+    </string-array>
+
+    <string-array name="currency_symbols">
+        <item>€</item>
+        <item>£</item>
+        <item>₨</item>
+        <item>AUD</item>
+        <item>CAD</item>
+        <item>¥</item>
+        <item>CNY</item>
+        <item>KRW</item>
+        <item>BTC</item>
+    </string-array>
+
+    <string-array name="currency_tickers">
+        <item>EUR</item>
+        <item>GBP</item>
+        <item>INR</item>
+        <item>AUD</item>
+        <item>CAD</item>
+        <item>JPY</item>
+        <item>CNY</item>
+        <item>KRW</item>
+        <item>BTC</item>
+    </string-array>
+
+    <integer-array name="currency_invert">
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>1</item>
+    </integer-array>
+
+
+</resources>
