@@ -1,5 +1,16 @@
 apply plugin: 'com.android.application'
 
+def computeVersionCode() {
+    if (System.env.CIRCLE_BUILD_NUM) {
+        return "$System.env.CIRCLE_BUILD_NUM".toInteger()
+    } else {
+        return 1
+    }
+}
+
+def computeVersionName() {
+    return "1.0." + computeVersionCode()
+}
 
 android {
     compileSdkVersion 23
@@ -9,8 +20,8 @@ android {
         applicationId "io.singleton.exchangerates"
         minSdkVersion 23
         targetSdkVersion 23
-        versionCode 1
-        versionName "1.0"
+        versionCode computeVersionCode()
+        versionName computeVersionName()
     }
     buildTypes {
         release {
