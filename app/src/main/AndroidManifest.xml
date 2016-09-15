@@ -17,7 +17,7 @@
 
         <service
             android:name=".ComplicationService"
-            android:label="@string/app_name"
+            android:label="@string/provider_name"
             android:icon="@mipmap/ic_provider_icon">
             <meta-data
                 android:name="android.support.wearable.complications.SUPPORTED_TYPES"

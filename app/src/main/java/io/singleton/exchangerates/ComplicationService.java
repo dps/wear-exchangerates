@@ -22,16 +22,6 @@ public class ComplicationService extends ComplicationProviderService {
         FxNetworkRequester.makeUpdateRequest(this, complicationId, type, manager);
     }
 
-    @Override
-    public void onComplicationActivated (int complicationId, int type, ComplicationManager manager) {
-        getSharedPreferences("config", 0).edit().putInt("comp-id-" + complicationId, complicationId).apply();
-    }
-
-    @Override
-    public void onComplicationDeactivated (int complicationId) {
-        getSharedPreferences("config", 0).edit().remove("comp-id-" + complicationId).apply();
-    }
-
     static void requestUpdateComplication(Context ctx, int id) {
         ProviderUpdateRequester requester = new ProviderUpdateRequester(
                 ctx, ComponentName.createRelative(
@@ -51,7 +41,6 @@ public class ComplicationService extends ComplicationProviderService {
         String displayQuote = quote > 0.0f ? df.format(quote) : "-";
         String displayLabel = invert ? "$:" + symbol : symbol + ":$";
         ComplicationData.Builder builder = new ComplicationData.Builder(type);
-        Intent intent = new Intent();
         builder.setTapAction(pi);
 
         if (type == ComplicationData.TYPE_SHORT_TEXT) {
